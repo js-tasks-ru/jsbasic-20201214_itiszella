@@ -11,13 +11,12 @@ function print(text) {
  */
 function isValid(name) {
   
-  if(Boolean(name) == false || name.length < 4 || name.split(' ').length - 1 > 0)  return false;
-     return true;
-  
-   
-   
-   // ваш код...
- }
+  if (!name || name.length < 4 || name.includes(' ')) {
+    return false;
+  } 
+
+  return true;
+}
 
 function sayHello() {
   let userName = prompt('Введите ваше имя');
