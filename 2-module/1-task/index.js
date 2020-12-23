@@ -5,14 +5,13 @@
  */
 function sumSalary(salaries) {
   let sum = 0;
-  let clone = Object.assign({}, salaries);
+  
+  for (const key in salaries) {
 
-  for (const key in clone) {
-
-    if (typeof clone[key] === 'number' && Number.isFinite(clone[key])) {
-      sum += clone[key];
+    if (typeof salaries[key] === 'number' && Number.isFinite(salaries[key])) {
+      sum += salaries[key];
     }
-    
+
   }
 
   return sum;
