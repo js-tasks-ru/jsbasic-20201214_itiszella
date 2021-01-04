@@ -4,9 +4,10 @@
  * @return {HTMLUListElement}
  */
 function makeFriendsList(friends) {
+
   let ul = document.createElement('ul');
   
-  for (i = 0; i < friends.length; i++) {
+    for (i = 0; i < friends.length; i++) {
 
     let li = document.createElement('li');
     li.innerHTML = `${friends[i].firstName} ${friends[i].lastName}`;
@@ -14,6 +15,7 @@ function makeFriendsList(friends) {
   }
 
   document.body.appendChild(ul);
+  
   return ul;
   
 }
