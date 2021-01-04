@@ -3,7 +3,6 @@
  * @param {Element} table
  */
 function highlight(table) {
-    console.log(table);
     
     let tbody = table.getElementsByTagName('tbody')[0];
     let trs = tbody.getElementsByTagName('tr');
