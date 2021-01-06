@@ -5,10 +5,11 @@
  */
 function getMinMax(str) {
 
-    let res = str.split(' ').join(',').split(',').filter(function(number) {
- 
-        return !isNaN(Number(number));
-    });
+    let res = str
+        .split(' ')
+        .join(',')
+        .split(',')
+        .filter(number => !isNaN(Number(number)));
  
     return {min: Math.min(...res), max: Math.max(...res)};
  }

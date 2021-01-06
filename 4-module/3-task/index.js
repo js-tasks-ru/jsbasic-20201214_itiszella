@@ -9,7 +9,7 @@ function highlight(table) {
 
   [...tr].forEach((element) => {
     
-    let status = element.getElementsByTagName("td")[3];
+    const status = element.getElementsByTagName("td")[3];
 
     if (!status.dataset.available) {
       element.hidden = true;
@@ -19,7 +19,7 @@ function highlight(table) {
       element.classList.add("unavailable");
     }
 
-    let gender = element.getElementsByTagName("td")[2];
+    const gender = element.getElementsByTagName("td")[2];
 
     if (gender.textContent === "m") {
       element.classList.add("male");
@@ -27,7 +27,7 @@ function highlight(table) {
       element.classList.add("female");
     }
 
-    let age = element.getElementsByTagName("td")[1];
+    const age = element.getElementsByTagName("td")[1];
 
     if (Number(age.textContent) < 18) {
       element.style.textDecoration = "line-through";
