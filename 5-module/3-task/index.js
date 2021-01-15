@@ -7,6 +7,7 @@ function initCarousel() {
   let carouselL = document.querySelector('.carousel__arrow_left');
  
   carouselL.style.display = 'none';
+  
   function updateLeftArrow(e) {
     if (e === 0) {
       carouselL.style.display = 'none'
@@ -23,8 +24,8 @@ function initCarousel() {
     }
   }
 
-
   carouselR.addEventListener('click', right)
+
   function right() {
     position -= width;
     position = Math.max(position, -width * (slides.length - 1));
@@ -33,7 +34,6 @@ function initCarousel() {
     
     updateLeftArrow(number);
     updateRightArrow(number);
-    console.log(typeof number);
   }
     
   carouselL.addEventListener('click', left);
@@ -46,7 +46,6 @@ function initCarousel() {
     
     updateRightArrow(number);
     updateLeftArrow(number);
-    console.log(number);
   }
   
 }
