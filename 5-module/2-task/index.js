@@ -3,11 +3,6 @@ function toggleText() {
 
   function handler() {
     element = document.getElementById('text');
-
-    if (element.hasAttribute('hidden')) {
-      element.hidden = false;
-    } else {
-      element.hidden = true;
-    }
+    element.hidden = !element.hidden;
   }
 }
